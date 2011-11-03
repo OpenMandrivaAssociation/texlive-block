@@ -1,3 +1,9 @@
+# revision 17209
+# category Package
+# catalog-ctan /macros/latex/contrib/block
+# catalog-date 2010-02-26 11:17:49 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-block
 Version:	20100226
 Release:	1
@@ -41,6 +47,7 @@ on the left margin.
 %{_texmfdistdir}/tex/latex/block/block.sty
 %doc %{_texmfdistdir}/doc/latex/block/block.pdf
 %doc %{_texmfdistdir}/doc/latex/block/block.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ on the left margin.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
