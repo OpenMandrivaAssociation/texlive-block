@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-block
 Version:	20100226
-Release:	3
+Release:	4
 Summary:	A block letter style for the letter class
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/block
