@@ -5,8 +5,8 @@ Summary:	A block letter style for the letter class
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/block
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.r17209.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.doc.r17209.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
