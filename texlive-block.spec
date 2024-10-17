@@ -3,7 +3,7 @@ Version:	17209
 Release:	2
 Summary:	A block letter style for the letter class
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/block
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/block
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.doc.r%{version}.tar.xz
