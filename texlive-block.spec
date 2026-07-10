@@ -1,44 +1,24 @@
-Name:		texlive-block
-Version:	17209
-Release:	2
+%global tl_name block
+%global tl_revision 17209
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	A block letter style for the letter class
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/block
-License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/block.doc.r%{version}.tar.xz
+License:	pd
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/block.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/block.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A style file for use with the letter class that overwrites the
-\opening and \closing macros so that letters can be styled with
-the block letter style instead of the default style. Thus, the
-return address, the closing, and the signature appear flushed
-on the left margin.
+A style file for use with the letter class that overwrites the \opening
+and \closing macros so that letters can be styled with the block letter
+style instead of the default style. Thus, the return address, the
+closing, and the signature appear flushed on the left margin.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/block/block.sty
-%doc %{_texmfdistdir}/doc/latex/block/block.pdf
-%doc %{_texmfdistdir}/doc/latex/block/block.tex
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
